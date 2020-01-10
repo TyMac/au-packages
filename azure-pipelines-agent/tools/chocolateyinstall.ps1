@@ -91,6 +91,18 @@ if ($pp['Url']) {
     if ($pp['Replace']) {
         $configOpts += @("--replace")
     }
+    if ($pp['Proxy']) {
+        $configOpts += @('--proxyurl')
+    }
+    if ($pp['ProxyPassword']) {
+        $configOpts += @('--proxypassword')
+    }
+    if ($pp['ProxyUsername']) {
+        $configOpts += @('--proxyusername')
+    }
+    else {
+        $configOpts += @('--runAsService')
+    }
 }
 
 $packageArgs = @{

@@ -45,6 +45,9 @@ The following package parameters can be set:
  * `/Work:WorkDirectory` - Work directory where job data is stored. Defaults to _work under the root of the agent directory. The work directory is owned by a given agent and should not share between multiple agents.
  * `/AgentName:Custom_Name` - Custom agent name (defaults to hostname)
  * `/Replace` - Replace already registered agent with same name
+ * `/Proxy:` - Proxy url to use for agent comunication
+ * `/ProxyPassword:` - Proxy password to use for agent comunication
+ * `/ProxyUsername:` - Proxy username to use for agent comunication
 
 To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.    
